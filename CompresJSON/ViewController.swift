@@ -13,6 +13,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        var message = "hello";
+        
+        var encrypted = message.encrypt()
+        println(encrypted)
+        
+        var decrypted = encrypted.decrypt()
+        println(decrypted)
     }
 
     override func didReceiveMemoryWarning() {

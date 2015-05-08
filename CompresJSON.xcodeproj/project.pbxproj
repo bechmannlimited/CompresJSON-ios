@@ -13,6 +13,13 @@
 		E426C3021AFD40FB000BB268 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E426C3011AFD40FB000BB268 /* Images.xcassets */; };
 		E426C3051AFD40FB000BB268 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E426C3031AFD40FB000BB268 /* LaunchScreen.xib */; };
 		E426C3111AFD40FB000BB268 /* CompresJSONTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E426C3101AFD40FB000BB268 /* CompresJSONTests.swift */; };
+		E426C32B1AFD4107000BB268 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = E426C31E1AFD4107000BB268 /* NSData+Base64.m */; };
+		E426C32C1AFD4107000BB268 /* StringEncryption.m in Sources */ = {isa = PBXBuildFile; fileRef = E426C3201AFD4107000BB268 /* StringEncryption.m */; };
+		E426C32D1AFD4107000BB268 /* StringEncryptionBridgeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E426C3221AFD4107000BB268 /* StringEncryptionBridgeHelper.m */; };
+		E426C32E1AFD4107000BB268 /* Encryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E426C3241AFD4107000BB268 /* Encryptor.swift */; };
+		E426C32F1AFD4107000BB268 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E426C3271AFD4107000BB268 /* Extensions.swift */; };
+		E426C3301AFD4107000BB268 /* CompresJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E426C3291AFD4107000BB268 /* CompresJSON.swift */; };
+		E426C3311AFD4107000BB268 /* CompresJSONSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E426C32A1AFD4107000BB268 /* CompresJSONSettings.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +43,17 @@
 		E426C30A1AFD40FB000BB268 /* CompresJSONTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CompresJSONTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E426C30F1AFD40FB000BB268 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E426C3101AFD40FB000BB268 /* CompresJSONTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompresJSONTests.swift; sourceTree = "<group>"; };
+		E426C31D1AFD4107000BB268 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
+		E426C31E1AFD4107000BB268 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
+		E426C31F1AFD4107000BB268 /* StringEncryption.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringEncryption.h; sourceTree = "<group>"; };
+		E426C3201AFD4107000BB268 /* StringEncryption.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringEncryption.m; sourceTree = "<group>"; };
+		E426C3211AFD4107000BB268 /* StringEncryptionBridgeHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StringEncryptionBridgeHelper.h; sourceTree = "<group>"; };
+		E426C3221AFD4107000BB268 /* StringEncryptionBridgeHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringEncryptionBridgeHelper.m; sourceTree = "<group>"; };
+		E426C3241AFD4107000BB268 /* Encryptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Encryptor.swift; sourceTree = "<group>"; };
+		E426C3251AFD4107000BB268 /* bridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = bridge.h; path = CompresJSON/bridge.h; sourceTree = "<group>"; };
+		E426C3271AFD4107000BB268 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		E426C3291AFD4107000BB268 /* CompresJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompresJSON.swift; sourceTree = "<group>"; };
+		E426C32A1AFD4107000BB268 /* CompresJSONSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompresJSONSettings.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +95,8 @@
 		E426C2F71AFD40FB000BB268 /* CompresJSON */ = {
 			isa = PBXGroup;
 			children = (
+				E426C3251AFD4107000BB268 /* bridge.h */,
+				E426C31A1AFD4107000BB268 /* CompresJSON */,
 				E426C2FA1AFD40FB000BB268 /* AppDelegate.swift */,
 				E426C2FC1AFD40FB000BB268 /* ViewController.swift */,
 				E426C2FE1AFD40FB000BB268 /* Main.storyboard */,
@@ -110,6 +130,63 @@
 				E426C30F1AFD40FB000BB268 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		E426C31A1AFD4107000BB268 /* CompresJSON */ = {
+			isa = PBXGroup;
+			children = (
+				E426C31B1AFD4107000BB268 /* Dependencies */,
+				E426C3231AFD4107000BB268 /* Encryption */,
+				E426C3261AFD4107000BB268 /* Extensions */,
+				E426C3281AFD4107000BB268 /* Library */,
+			);
+			path = CompresJSON;
+			sourceTree = "<group>";
+		};
+		E426C31B1AFD4107000BB268 /* Dependencies */ = {
+			isa = PBXGroup;
+			children = (
+				E426C31C1AFD4107000BB268 /* objc */,
+			);
+			path = Dependencies;
+			sourceTree = "<group>";
+		};
+		E426C31C1AFD4107000BB268 /* objc */ = {
+			isa = PBXGroup;
+			children = (
+				E426C31D1AFD4107000BB268 /* NSData+Base64.h */,
+				E426C31E1AFD4107000BB268 /* NSData+Base64.m */,
+				E426C31F1AFD4107000BB268 /* StringEncryption.h */,
+				E426C3201AFD4107000BB268 /* StringEncryption.m */,
+				E426C3211AFD4107000BB268 /* StringEncryptionBridgeHelper.h */,
+				E426C3221AFD4107000BB268 /* StringEncryptionBridgeHelper.m */,
+			);
+			path = objc;
+			sourceTree = "<group>";
+		};
+		E426C3231AFD4107000BB268 /* Encryption */ = {
+			isa = PBXGroup;
+			children = (
+				E426C3241AFD4107000BB268 /* Encryptor.swift */,
+			);
+			path = Encryption;
+			sourceTree = "<group>";
+		};
+		E426C3261AFD4107000BB268 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E426C3271AFD4107000BB268 /* Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E426C3281AFD4107000BB268 /* Library */ = {
+			isa = PBXGroup;
+			children = (
+				E426C3291AFD4107000BB268 /* CompresJSON.swift */,
+				E426C32A1AFD4107000BB268 /* CompresJSONSettings.swift */,
+			);
+			path = Library;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,6 +291,13 @@
 			files = (
 				E426C2FD1AFD40FB000BB268 /* ViewController.swift in Sources */,
 				E426C2FB1AFD40FB000BB268 /* AppDelegate.swift in Sources */,
+				E426C32B1AFD4107000BB268 /* NSData+Base64.m in Sources */,
+				E426C32D1AFD4107000BB268 /* StringEncryptionBridgeHelper.m in Sources */,
+				E426C3311AFD4107000BB268 /* CompresJSONSettings.swift in Sources */,
+				E426C32E1AFD4107000BB268 /* Encryptor.swift in Sources */,
+				E426C32C1AFD4107000BB268 /* StringEncryption.m in Sources */,
+				E426C32F1AFD4107000BB268 /* Extensions.swift in Sources */,
+				E426C3301AFD4107000BB268 /* CompresJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -345,6 +429,7 @@
 				INFOPLIST_FILE = CompresJSON/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = CompresJSON/CompresJSON/bridge.h;
 			};
 			name = Debug;
 		};
@@ -355,6 +440,7 @@
 				INFOPLIST_FILE = CompresJSON/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = CompresJSON/CompresJSON/bridge.h;
 			};
 			name = Release;
 		};
