@@ -15,7 +15,7 @@
 @interface NSData (Base64)
 
 /*!	@function	+dataWithBase64EncodedString:
- @discussion	This method "libraries": ["GoogleAnalyticsServices", "sqlite3", "z"]returns an autoreleased NSData object. The NSData object is initialized with the
+ @discussion	This method returns an autoreleased NSData object. The NSData object is initialized with the
  contents of the Base 64 encoded string. This is a convenience method.
  @param	inBase64String	An NSString object that contains only Base 64 encoded data.
  @result	The NSData object. */

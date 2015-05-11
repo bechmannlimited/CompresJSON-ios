@@ -14,13 +14,13 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        //CompresJsonRequest.create("http://www.google.com", parameters: ["UserID": 18, "Name": "Alex" ] , method: .POST)
+        var message = "hello";
         
-        var a = "hello".encrypt("hi")
-        println(a)
+        var encrypted = message.encrypt()
+        println(encrypted)
         
-        var b = a.decrypt("hi")
-        println(b)
+        var decrypted = encrypted.decrypt()
+        println(decrypted)
     }
 
     override func didReceiveMemoryWarning() {
