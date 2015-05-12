@@ -19,6 +19,8 @@
 		E426C32E1AFD4107000BB268 /* Encryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E426C3241AFD4107000BB268 /* Encryptor.swift */; };
 		E426C3301AFD4107000BB268 /* CompresJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E426C3291AFD4107000BB268 /* CompresJSON.swift */; };
 		E426C3311AFD4107000BB268 /* CompresJSONSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E426C32A1AFD4107000BB268 /* CompresJSONSettings.swift */; };
+		E4C2F2CF1B02339C00C7A459 /* CompresJsonRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C2F2CE1B02339C00C7A459 /* CompresJsonRequest.swift */; };
+		E4C2F2D21B0234DE00C7A459 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4C2F2D11B0234DE00C7A459 /* User.swift */; };
 		E4DB7A681B010DE1001AFACC /* NSData+GZip+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DB7A671B010DE1001AFACC /* NSData+GZip+Extension.swift */; };
 		E4DB7A6A1B010E03001AFACC /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E4DB7A691B010E03001AFACC /* libz.dylib */; };
 		E4DB7A941B011289001AFACC /* NSDate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DB7A871B011289001AFACC /* NSDate+Extension.swift */; };
@@ -72,6 +74,8 @@
 		E426C3251AFD4107000BB268 /* bridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = bridge.h; path = CompresJSON/bridge.h; sourceTree = "<group>"; };
 		E426C3291AFD4107000BB268 /* CompresJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompresJSON.swift; sourceTree = "<group>"; };
 		E426C32A1AFD4107000BB268 /* CompresJSONSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompresJSONSettings.swift; sourceTree = "<group>"; };
+		E4C2F2CE1B02339C00C7A459 /* CompresJsonRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompresJsonRequest.swift; sourceTree = "<group>"; };
+		E4C2F2D11B0234DE00C7A459 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E4DB7A671B010DE1001AFACC /* NSData+GZip+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSData+GZip+Extension.swift"; sourceTree = "<group>"; };
 		E4DB7A691B010E03001AFACC /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		E4DB7A871B011289001AFACC /* NSDate+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Extension.swift"; sourceTree = "<group>"; };
@@ -135,6 +139,7 @@
 		E426C2F71AFD40FB000BB268 /* CompresJSON */ = {
 			isa = PBXGroup;
 			children = (
+				E4C2F2D01B0234D300C7A459 /* Classes */,
 				E426C3251AFD4107000BB268 /* bridge.h */,
 				E426C31A1AFD4107000BB268 /* CompresJSON */,
 				E426C2FA1AFD40FB000BB268 /* AppDelegate.swift */,
@@ -220,10 +225,19 @@
 		E426C3281AFD4107000BB268 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				E4C2F2CE1B02339C00C7A459 /* CompresJsonRequest.swift */,
 				E426C3291AFD4107000BB268 /* CompresJSON.swift */,
 				E426C32A1AFD4107000BB268 /* CompresJSONSettings.swift */,
 			);
 			path = Library;
+			sourceTree = "<group>";
+		};
+		E4C2F2D01B0234D300C7A459 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				E4C2F2D11B0234DE00C7A459 /* User.swift */,
+			);
+			name = Classes;
 			sourceTree = "<group>";
 		};
 		E4DB7A851B011289001AFACC /* ABToolKit */ = {
@@ -410,11 +424,13 @@
 				E4DB7A9C1B011289001AFACC /* JsonRequest.swift in Sources */,
 				E426C32D1AFD4107000BB268 /* StringEncryptionBridgeHelper.m in Sources */,
 				E4DB7A9E1B011289001AFACC /* WebApiManager.swift in Sources */,
+				E4C2F2CF1B02339C00C7A459 /* CompresJsonRequest.swift in Sources */,
 				E426C3311AFD4107000BB268 /* CompresJSONSettings.swift in Sources */,
 				E4DB7A951B011289001AFACC /* String+Extension.swift in Sources */,
 				E4DB7AA81B01147D001AFACC /* cjson_String+Extension.swift in Sources */,
 				E4DB7A981B011289001AFACC /* Almofire.swift in Sources */,
 				E4DB7A9A1B011289001AFACC /* JSONMappingDefaults.swift in Sources */,
+				E4C2F2D21B0234DE00C7A459 /* User.swift in Sources */,
 				E426C32E1AFD4107000BB268 /* Encryptor.swift in Sources */,
 				E4DB7A961B011289001AFACC /* UIAlertController+Extension.swift in Sources */,
 				E4DB7AA91B01147D001AFACC /* Extensions.swift in Sources */,

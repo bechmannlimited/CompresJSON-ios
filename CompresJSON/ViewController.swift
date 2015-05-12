@@ -16,16 +16,10 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        var message = "hello really";
-        
-        //println(message.compress())
-        //println(message.encrypt(CompresJSON.sharedInstance().settings.encryptionKey))
-        
-        var encrypted = CompresJSON.encryptAndCompressAsNecessary(message)
-        println(encrypted)
-        
-        var decrypted = CompresJSON.decryptAndDecompressAsNecessary("U2FsdGVkX1/fzO1EaH5yyxiIHiZduWW6OGQ6BD1e6scT385SPoz8r4Gqc+CGyI4v")
-        println(decrypted)
+        CompresJsonRequest.create("http://alex.bechmann.co.uk/compresjson/api/", parameters: ["test" : "valueee"], method: .POST).onDownloadSuccess { (json, request) -> () in
+            
+            println(json)
+        }
         
         
     }

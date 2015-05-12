@@ -9,28 +9,28 @@
 import UIKit
 
 
-class JsonRequest {
+class JsonRequest: NSObject {
     
-    private var urlString = ""
-    private var method: Method = .GET
-    private var parameters: Dictionary<String, AnyObject>?
+    internal var urlString = ""
+    internal var method: Method = .GET
+    internal var parameters: Dictionary<String, AnyObject>?
     
     var almofireRequest: Request?
     
-    private var succeedDownloadClosures: [(json: JSON, request: JsonRequest) -> ()] = []
-    private var succeedContextClosures: [() -> ()] = []
+    internal var succeedDownloadClosures: [(json: JSON, request: JsonRequest) -> ()] = []
+    internal var succeedContextClosures: [() -> ()] = []
     
-    private var failDownloadClosures: [(error: NSError, alert: UIAlertController) -> ()] = []
-    private var failContextClosures: [() -> ()] = []
+    internal var failDownloadClosures: [(error: NSError, alert: UIAlertController) -> ()] = []
+    internal var failContextClosures: [() -> ()] = []
     
-    private var finishDownloadClosures: [() -> ()] = []
+    internal var finishDownloadClosures: [() -> ()] = []
     
-    class func create(urlString:String, parameters:Dictionary<String, AnyObject>?, method:Method) -> JsonRequest {
+    class func create< T : JsonRequest >(urlString:String, parameters:Dictionary<String, AnyObject>?, method:Method) -> T {
         
-        return JsonRequest(urlString: urlString, parameters: parameters, method: method)
+        return JsonRequest(urlString: urlString, parameters: parameters, method: method) as! T
     }
     
-    private convenience init(urlString:String, parameters:Dictionary<String, AnyObject>?, method:Method) {
+    internal convenience init(urlString:String, parameters:Dictionary<String, AnyObject>?, method:Method) {
         self.init()
         
         self.urlString = urlString
@@ -40,29 +40,29 @@ class JsonRequest {
         exec()
     }
     
-    func onDownloadSuccess(success: (json: JSON, request: JsonRequest) -> ()) -> JsonRequest {
+    func onDownloadSuccess(success: (json: JSON, request: JsonRequest) -> ()) -> Self {
         self.succeedDownloadClosures.append(success)
         return self
     }
     
-    func onContextSuccess(success: () -> ()) -> JsonRequest {
+    func onContextSuccess(success: () -> ()) -> Self {
         self.succeedContextClosures.append(success)
         return self
     }
     
     
-    func onDownloadFailure(failure: (error: NSError, alert: UIAlertController) -> ()) -> JsonRequest {
+    func onDownloadFailure(failure: (error: NSError, alert: UIAlertController) -> ()) -> Self {
         self.failDownloadClosures.append(failure)
         return self
     }
     
-    func onContextFailure(failure: () -> ()) -> JsonRequest {
+    func onContextFailure(failure: () -> ()) -> Self {
         self.failContextClosures.append(failure)
         return self
     }
     
     
-    func onDownloadFinished(finished: () -> ()) -> JsonRequest {
+    func onDownloadFinished(finished: () -> ()) -> Self {
         self.finishDownloadClosures.append(finished)
         return self
     }
@@ -112,15 +112,15 @@ class JsonRequest {
     }
     
     
-    private func exec() {
+    internal func exec() {
         
         UIApplication.sharedApplication().networkActivityIndicatorVisible = true
         
         self.almofireRequest = request(method, urlString, parameters: parameters, encoding: ParameterEncoding.URL)
             .response{ (request, response, data, error) in
-
-                if let e = error {
                 
+                if let e = error {
+                    
                     var alert = self.alertControllerForError(e, completion: { (retry) -> () in
                         
                         if retry {
@@ -144,7 +144,7 @@ class JsonRequest {
         }
     }
     
-    private func alertControllerForError(error: NSError, completion: (retry: Bool) -> ()) -> UIAlertController {
+    internal func alertControllerForError(error: NSError, completion: (retry: Bool) -> ()) -> UIAlertController {
         
         let alertController = UIAlertController(title: nil, message: error.localizedDescription, preferredStyle: UIAlertControllerStyle.Alert)
         
@@ -165,7 +165,7 @@ class JsonRequest {
         
         self.almofireRequest?.cancel()
     }
-
+    
 }
 
 

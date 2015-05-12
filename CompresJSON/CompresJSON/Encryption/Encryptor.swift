@@ -21,14 +21,6 @@ class Encryptor: NSObject {
         
         kAnalyzer.loadScript(kScriptPath)
         return kAnalyzer.executeJavaScriptFunction("Encrypt", args: [str, key]).toString()
-        
-//        var messageData = str.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)!
-//        
-//        var keyData = key.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)!
-//        var padding:CCOptions = StringEncryptionBridgeHelper.options()
-//        
-//        var encryptedData:NSData = crypto.encrypt(messageData, key: keyData, padding: &padding)
-//        return encryptedData.base64NSString()
     }
     
     class func decrypt(str: String, key: String) -> String {
@@ -37,14 +29,6 @@ class Encryptor: NSObject {
         
         kAnalyzer.loadScript(kScriptPath)
         return kAnalyzer.executeJavaScriptFunction("Decrypt", args: [str, key]).toString()
-        
-//        var keyData = key.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)!
-//        var padding:CCOptions = StringEncryptionBridgeHelper.options()
-//        
-//        var decryptedData:NSData = crypto.decrypt(str.NSDataFromBase64String(), key: keyData, padding: &padding)
-//        var str = NSString(data: decryptedData, encoding: NSUTF8StringEncoding)!
-//        
-//        return String(str)
     }
     
     class func printErrorIfEncryptionKeyIsNotSet() {

@@ -17,26 +17,12 @@ class Compressor: NSObject {
         
         kAnalyzer.loadScript(kScriptPath)
         return kAnalyzer.executeJavaScriptFunction("Compress", args: [str]).toString()
-        
-//        var data:NSData = NSString(UTF8String: str)!.dataUsingEncoding(NSUTF8StringEncoding)!
-//        
-//        var error: NSError?
-//        var compressedData = data.gzippedData()!
-//        
-//        return compressedData.base64NSString()
     }
     
     class func decompress(str: String) -> String {
         
         kAnalyzer.loadScript(kScriptPath)
         return kAnalyzer.executeJavaScriptFunction("Decompress", args: [str]).toString()
-        
-//        var data = str.NSDataFromBase64String()
-//        
-//        var error: NSError?
-//        var decompressedData = data.gunzippedData()!
-//        
-//        return String(NSString(data: decompressedData, encoding: NSUTF8StringEncoding)!)
     }
     
 }
