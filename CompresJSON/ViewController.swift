@@ -34,14 +34,20 @@ class ViewController: UIViewController {
         CardDesignItem.compresJsonWebApiGetObjectByID(CardDesignItem.self, id: 8386, completion: { (object) -> () in
             
             var item:CardDesignItem = object
-            item.ItemText = "hello test 6 !!!"
+            item.ItemText = "hello test 9 !!!"
             item.CardDesignItemID = 8386 // REMEMBER ID
             item.compresJSONWebApiUpdate()?.onDownloadSuccess({ (json, request) -> () in
                 
-                println(json)
+                item = CardDesignItem.createObjectFromJson(json)
+                println("after update: \(item.ItemText)")
             })
             
         })
+        
+//        CompresJsonRequest.create(CardDesignItem.webApiUrls().getMultipleUrl()!, parameters: nil, method: .GET).onDownloadSuccess { (json, request) -> () in
+//            
+//            println(json)
+//        }
     }
 
     override func didReceiveMemoryWarning() {

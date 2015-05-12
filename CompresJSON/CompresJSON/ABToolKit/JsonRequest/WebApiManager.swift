@@ -76,6 +76,11 @@ class WebApiManager: NSObject {
         return mutableUrl(id)
     }
     
+    func getMultipleUrl() -> String? {
+        
+        return staticUrl()
+    }
+    
     func deleteUrl(id: Int?) -> String? {
         
         if let id = id {
