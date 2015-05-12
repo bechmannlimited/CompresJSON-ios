@@ -24,7 +24,10 @@ class CompresJsonRequest: JsonRequest {
             var err: NSError?
             var json: String = NSJSONSerialization.dataWithJSONObject(params, options: nil, error: &err)!.toString()
             
-            //println("json: \(json)")
+            //NSJSONSerialization.dataWithJSONObject(params, options: NSJSONWritingOptions.PrettyPrinted, error: <#NSErrorPointer#>)
+            //json = json.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)!
+            json = json.replaceString("\"", withString: "#")
+            println("json: \(json)")
             json = CompresJSON.encryptAndCompressAsNecessary(json)
             
             self.parameters = Dictionary<String, AnyObject>()
@@ -32,6 +35,7 @@ class CompresJsonRequest: JsonRequest {
         }
         
         //println(self.parameters!["data"])
+        //println(self.urlString)
         //println(CompresJSON.decryptAndDecompressAsNecessary(self.parameters!["data"] as! String))
         
         self.almofireRequest = request(self.method, self.urlString, parameters: self.parameters, encoding: ParameterEncoding.URL)
@@ -55,8 +59,11 @@ class CompresJsonRequest: JsonRequest {
                     let json = JSON(data: data! as! NSData)
                     
                     let encryptedJson = json["data"].stringValue
-                    let unencryptedJson = CompresJSON.decryptAndDecompressAsNecessary(encryptedJson)
-                    let unpackedJson = JSON(unencryptedJson)
+                    let unencryptedJson = CompresJSON.decryptAndDecompressAsNecessary(encryptedJson).replaceString("#", withString: "\"")
+                    
+                    let dataFromString = unencryptedJson.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)!
+                    
+                    let unpackedJson = JSON(data: dataFromString)
                     
                     self.succeedDownload(unpackedJson)
                 }

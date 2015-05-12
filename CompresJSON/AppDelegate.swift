@@ -19,6 +19,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         CompresJSON.sharedInstance().settings.encryptionKey = "7e4bac048ef766e83f0ec8c079e1f90c2eb690a9"
         
+        WebApiDefaults.sharedInstance().domain = "http://alex.bechmann.co.uk/compresjson"
+        
         return true
     }
 

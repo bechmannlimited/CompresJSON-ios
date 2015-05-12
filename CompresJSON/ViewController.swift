@@ -16,10 +16,19 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         
-        CompresJsonRequest.create("http://alex.bechmann.co.uk/compresjson/api/", parameters: ["test" : "valueee"], method: .POST).onDownloadSuccess { (json, request) -> () in
+        
+        var item = CardDesignItem()
+        item.ColorID = 5
+        item.FontID = 15
+        item.ItemText = "hello test3 ???"
+        item.CardDesignID = 1420
+        item.compresJSONWebApiInsert()?.onDownloadSuccess({ (json, request) -> () in
             
-            println(json)
-        }
+            var item2:CardDesignItem = CardDesignItem.createObjectFromJson(json)
+
+            println(item2.ItemText)
+            println(item2.CardDesignItemID)
+        })
         
         
     }

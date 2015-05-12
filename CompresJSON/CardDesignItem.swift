@@ -8,13 +8,13 @@
 
 import UIKit
 
-class User: JSONObject {
+class CardDesignItem: CompresJSONObject {
     
-    var id = 0
-    var Username = ""
-    var Email = ""
-    var Password = ""
-    
+    var CardDesignItemID = 0
+    var FontID = 0
+    var ColorID = 0
+    var ItemText = ""
+    var CardDesignID = 0
     
     override func registerClassesForJsonMapping() {
         
@@ -25,11 +25,11 @@ class User: JSONObject {
     
     override class func webApiUrls() -> WebApiManager {
         
-        return WebApiManager().setupUrlsForREST("Users")
+        return WebApiManager().setupUrlsForREST("CardDesignItems")
     }
     
     override func webApiRestObjectID() -> Int? {
         
-        return id
+        return CardDesignItemID
     }
 }

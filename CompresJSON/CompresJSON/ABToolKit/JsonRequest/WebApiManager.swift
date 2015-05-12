@@ -48,12 +48,12 @@ class WebApiManager: NSObject {
     
     private func mutableUrl(id: Int) -> String? {
         
-        return validRestUrlSet() ? "\(getDomain())/\(restKey!)/\(id)" : nil
+        return validRestUrlSet() ? "\(getDomain())/api/\(restKey!)/\(id)" : nil
     }
     
     private func staticUrl() -> String? {
         
-        return validRestUrlSet() ? "\(getDomain())/\(restKey!)" : nil
+        return validRestUrlSet() ? "\(getDomain())/api/\(restKey!)" : nil
     }
     
     func updateUrl(id: Int?) -> String? {
