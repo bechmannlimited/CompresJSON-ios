@@ -10,6 +10,17 @@ import UIKit
 
 class CompresJSONObject: JSONObject {
    
+    class func compresJsonWebApiGetObjectByID< T : JSONObject >(type: T.Type, id:Int, completion: (object:T) -> () ) {
+        
+        if let url = T.webApiUrls().getUrl(id) {
+            
+            CompresJsonRequest.create(url, parameters: nil, method: .GET).onDownloadSuccess { (json, request) -> () in
+                
+                completion(object: self.createObjectFromJson(json) as T)
+            }
+        }
+    }
+    
     // MARK: - Web Api Methods
     
     func compresJSONWebApiInsert() -> CompresJsonRequest?{

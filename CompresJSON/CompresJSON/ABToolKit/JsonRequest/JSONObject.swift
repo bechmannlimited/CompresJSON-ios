@@ -68,17 +68,17 @@ class JSONObject: NSObject, WebApiManagerDelegate, JsonMappingDelegate {
         return nil
     }
     
-//    class func getObjectFromJsonAsync< T : JSONObject >(id:Int, completion: (object:T) -> () ) {
-//        
-//        if let url = T.webApiUrls().getUrl(id) {
-//         
-//            JsonRequest.create(url, parameters: nil, method: .GET).onDownloadSuccess { (json, request) -> () in
-//                
-//                completion(object: self.createObjectFromJson(json) as T)
-//            }
-//        }
-//    }
-//    
+    class func webApiGetObjectByID< T : JSONObject >(type: T.Type, id:Int, completion: (object:T) -> () ) {
+        
+        if let url = T.webApiUrls().getUrl(id) {
+         
+            JsonRequest.create(url, parameters: nil, method: .GET).onDownloadSuccess { (json, request) -> () in
+                
+                completion(object: self.createObjectFromJson(json) as T)
+            }
+        }
+    }
+//
 //    class func requestObjectWithID< T : JSONObject >(id: Int) -> JsonRequest? {
 //        
 //        if let url = T.webApiUrls().getUrl(id) {
