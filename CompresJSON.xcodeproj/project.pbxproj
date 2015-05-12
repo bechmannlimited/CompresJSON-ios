@@ -17,9 +17,28 @@
 		E426C32C1AFD4107000BB268 /* StringEncryption.m in Sources */ = {isa = PBXBuildFile; fileRef = E426C3201AFD4107000BB268 /* StringEncryption.m */; };
 		E426C32D1AFD4107000BB268 /* StringEncryptionBridgeHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = E426C3221AFD4107000BB268 /* StringEncryptionBridgeHelper.m */; };
 		E426C32E1AFD4107000BB268 /* Encryptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E426C3241AFD4107000BB268 /* Encryptor.swift */; };
-		E426C32F1AFD4107000BB268 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E426C3271AFD4107000BB268 /* Extensions.swift */; };
 		E426C3301AFD4107000BB268 /* CompresJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E426C3291AFD4107000BB268 /* CompresJSON.swift */; };
 		E426C3311AFD4107000BB268 /* CompresJSONSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = E426C32A1AFD4107000BB268 /* CompresJSONSettings.swift */; };
+		E4DB7A681B010DE1001AFACC /* NSData+GZip+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DB7A671B010DE1001AFACC /* NSData+GZip+Extension.swift */; };
+		E4DB7A6A1B010E03001AFACC /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = E4DB7A691B010E03001AFACC /* libz.dylib */; };
+		E4DB7A941B011289001AFACC /* NSDate+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DB7A871B011289001AFACC /* NSDate+Extension.swift */; };
+		E4DB7A951B011289001AFACC /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DB7A881B011289001AFACC /* String+Extension.swift */; };
+		E4DB7A961B011289001AFACC /* UIAlertController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DB7A891B011289001AFACC /* UIAlertController+Extension.swift */; };
+		E4DB7A971B011289001AFACC /* UIViewController+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DB7A8A1B011289001AFACC /* UIViewController+Extension.swift */; };
+		E4DB7A981B011289001AFACC /* Almofire.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DB7A8C1B011289001AFACC /* Almofire.swift */; };
+		E4DB7A991B011289001AFACC /* swiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DB7A8D1B011289001AFACC /* swiftyJSON.swift */; };
+		E4DB7A9A1B011289001AFACC /* JSONMappingDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DB7A8F1B011289001AFACC /* JSONMappingDefaults.swift */; };
+		E4DB7A9B1B011289001AFACC /* JSONObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DB7A901B011289001AFACC /* JSONObject.swift */; };
+		E4DB7A9C1B011289001AFACC /* JsonRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DB7A911B011289001AFACC /* JsonRequest.swift */; };
+		E4DB7A9D1B011289001AFACC /* WebApiDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DB7A921B011289001AFACC /* WebApiDefaults.swift */; };
+		E4DB7A9E1B011289001AFACC /* WebApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DB7A931B011289001AFACC /* WebApiManager.swift */; };
+		E4DB7AA11B011384001AFACC /* Compressor.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DB7AA01B011384001AFACC /* Compressor.swift */; };
+		E4DB7AA31B0113AA001AFACC /* DateFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DB7AA21B0113AA001AFACC /* DateFormat.swift */; };
+		E4DB7AA81B01147D001AFACC /* cjson_String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DB7AA51B01147D001AFACC /* cjson_String+Extension.swift */; };
+		E4DB7AA91B01147D001AFACC /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DB7AA61B01147D001AFACC /* Extensions.swift */; };
+		E4DB7AAA1B01147D001AFACC /* NSData+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DB7AA71B01147D001AFACC /* NSData+Extension.swift */; };
+		E4DB7AE41B01820D001AFACC /* JavaScriptAnalyzer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4DB7AE31B01820D001AFACC /* JavaScriptAnalyzer.swift */; };
+		E4DB7AEE1B022F1B001AFACC /* encryptor_compressor.txt in Resources */ = {isa = PBXBuildFile; fileRef = E4DB7AED1B022F1B001AFACC /* encryptor_compressor.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,9 +70,28 @@
 		E426C3221AFD4107000BB268 /* StringEncryptionBridgeHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StringEncryptionBridgeHelper.m; sourceTree = "<group>"; };
 		E426C3241AFD4107000BB268 /* Encryptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Encryptor.swift; sourceTree = "<group>"; };
 		E426C3251AFD4107000BB268 /* bridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = bridge.h; path = CompresJSON/bridge.h; sourceTree = "<group>"; };
-		E426C3271AFD4107000BB268 /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		E426C3291AFD4107000BB268 /* CompresJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompresJSON.swift; sourceTree = "<group>"; };
 		E426C32A1AFD4107000BB268 /* CompresJSONSettings.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CompresJSONSettings.swift; sourceTree = "<group>"; };
+		E4DB7A671B010DE1001AFACC /* NSData+GZip+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSData+GZip+Extension.swift"; sourceTree = "<group>"; };
+		E4DB7A691B010E03001AFACC /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		E4DB7A871B011289001AFACC /* NSDate+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSDate+Extension.swift"; sourceTree = "<group>"; };
+		E4DB7A881B011289001AFACC /* String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		E4DB7A891B011289001AFACC /* UIAlertController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIAlertController+Extension.swift"; sourceTree = "<group>"; };
+		E4DB7A8A1B011289001AFACC /* UIViewController+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extension.swift"; sourceTree = "<group>"; };
+		E4DB7A8C1B011289001AFACC /* Almofire.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Almofire.swift; sourceTree = "<group>"; };
+		E4DB7A8D1B011289001AFACC /* swiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = swiftyJSON.swift; sourceTree = "<group>"; };
+		E4DB7A8F1B011289001AFACC /* JSONMappingDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONMappingDefaults.swift; sourceTree = "<group>"; };
+		E4DB7A901B011289001AFACC /* JSONObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONObject.swift; sourceTree = "<group>"; };
+		E4DB7A911B011289001AFACC /* JsonRequest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JsonRequest.swift; sourceTree = "<group>"; };
+		E4DB7A921B011289001AFACC /* WebApiDefaults.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebApiDefaults.swift; sourceTree = "<group>"; };
+		E4DB7A931B011289001AFACC /* WebApiManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebApiManager.swift; sourceTree = "<group>"; };
+		E4DB7AA01B011384001AFACC /* Compressor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Compressor.swift; sourceTree = "<group>"; };
+		E4DB7AA21B0113AA001AFACC /* DateFormat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DateFormat.swift; sourceTree = "<group>"; };
+		E4DB7AA51B01147D001AFACC /* cjson_String+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "cjson_String+Extension.swift"; sourceTree = "<group>"; };
+		E4DB7AA61B01147D001AFACC /* Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		E4DB7AA71B01147D001AFACC /* NSData+Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSData+Extension.swift"; sourceTree = "<group>"; };
+		E4DB7AE31B01820D001AFACC /* JavaScriptAnalyzer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JavaScriptAnalyzer.swift; sourceTree = "<group>"; };
+		E4DB7AED1B022F1B001AFACC /* encryptor_compressor.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = encryptor_compressor.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +99,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4DB7A6A1B010E03001AFACC /* libz.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,6 +116,7 @@
 		E426C2EC1AFD40FB000BB268 = {
 			isa = PBXGroup;
 			children = (
+				E4DB7A691B010E03001AFACC /* libz.dylib */,
 				E426C2F71AFD40FB000BB268 /* CompresJSON */,
 				E426C30D1AFD40FB000BB268 /* CompresJSONTests */,
 				E426C2F61AFD40FB000BB268 /* Products */,
@@ -110,6 +150,7 @@
 		E426C2F81AFD40FB000BB268 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				E4DB7AED1B022F1B001AFACC /* encryptor_compressor.txt */,
 				E426C2F91AFD40FB000BB268 /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -135,9 +176,12 @@
 		E426C31A1AFD4107000BB268 /* CompresJSON */ = {
 			isa = PBXGroup;
 			children = (
+				E4DB7AE01B018182001AFACC /* JS */,
+				E4DB7AA41B01147D001AFACC /* Extensions */,
+				E4DB7A9F1B011384001AFACC /* Compression */,
+				E4DB7A851B011289001AFACC /* ABToolKit */,
 				E426C31B1AFD4107000BB268 /* Dependencies */,
 				E426C3231AFD4107000BB268 /* Encryption */,
-				E426C3261AFD4107000BB268 /* Extensions */,
 				E426C3281AFD4107000BB268 /* Library */,
 			);
 			path = CompresJSON;
@@ -146,6 +190,7 @@
 		E426C31B1AFD4107000BB268 /* Dependencies */ = {
 			isa = PBXGroup;
 			children = (
+				E4DB7A671B010DE1001AFACC /* NSData+GZip+Extension.swift */,
 				E426C31C1AFD4107000BB268 /* objc */,
 			);
 			path = Dependencies;
@@ -172,14 +217,6 @@
 			path = Encryption;
 			sourceTree = "<group>";
 		};
-		E426C3261AFD4107000BB268 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				E426C3271AFD4107000BB268 /* Extensions.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		E426C3281AFD4107000BB268 /* Library */ = {
 			isa = PBXGroup;
 			children = (
@@ -187,6 +224,75 @@
 				E426C32A1AFD4107000BB268 /* CompresJSONSettings.swift */,
 			);
 			path = Library;
+			sourceTree = "<group>";
+		};
+		E4DB7A851B011289001AFACC /* ABToolKit */ = {
+			isa = PBXGroup;
+			children = (
+				E4DB7A861B011289001AFACC /* Extensions */,
+				E4DB7A8B1B011289001AFACC /* External */,
+				E4DB7A8E1B011289001AFACC /* JsonRequest */,
+			);
+			path = ABToolKit;
+			sourceTree = "<group>";
+		};
+		E4DB7A861B011289001AFACC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E4DB7A871B011289001AFACC /* NSDate+Extension.swift */,
+				E4DB7A881B011289001AFACC /* String+Extension.swift */,
+				E4DB7A891B011289001AFACC /* UIAlertController+Extension.swift */,
+				E4DB7A8A1B011289001AFACC /* UIViewController+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E4DB7A8B1B011289001AFACC /* External */ = {
+			isa = PBXGroup;
+			children = (
+				E4DB7A8C1B011289001AFACC /* Almofire.swift */,
+				E4DB7A8D1B011289001AFACC /* swiftyJSON.swift */,
+			);
+			path = External;
+			sourceTree = "<group>";
+		};
+		E4DB7A8E1B011289001AFACC /* JsonRequest */ = {
+			isa = PBXGroup;
+			children = (
+				E4DB7AA21B0113AA001AFACC /* DateFormat.swift */,
+				E4DB7A8F1B011289001AFACC /* JSONMappingDefaults.swift */,
+				E4DB7A901B011289001AFACC /* JSONObject.swift */,
+				E4DB7A911B011289001AFACC /* JsonRequest.swift */,
+				E4DB7A921B011289001AFACC /* WebApiDefaults.swift */,
+				E4DB7A931B011289001AFACC /* WebApiManager.swift */,
+			);
+			path = JsonRequest;
+			sourceTree = "<group>";
+		};
+		E4DB7A9F1B011384001AFACC /* Compression */ = {
+			isa = PBXGroup;
+			children = (
+				E4DB7AA01B011384001AFACC /* Compressor.swift */,
+			);
+			path = Compression;
+			sourceTree = "<group>";
+		};
+		E4DB7AA41B01147D001AFACC /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				E4DB7AA51B01147D001AFACC /* cjson_String+Extension.swift */,
+				E4DB7AA61B01147D001AFACC /* Extensions.swift */,
+				E4DB7AA71B01147D001AFACC /* NSData+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		E4DB7AE01B018182001AFACC /* JS */ = {
+			isa = PBXGroup;
+			children = (
+				E4DB7AE31B01820D001AFACC /* JavaScriptAnalyzer.swift */,
+			);
+			name = JS;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,6 +375,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4DB7AEE1B022F1B001AFACC /* encryptor_compressor.txt in Resources */,
 				E426C3001AFD40FB000BB268 /* Main.storyboard in Resources */,
 				E426C3051AFD40FB000BB268 /* LaunchScreen.xib in Resources */,
 				E426C3021AFD40FB000BB268 /* Images.xcassets in Resources */,
@@ -289,14 +396,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4DB7A941B011289001AFACC /* NSDate+Extension.swift in Sources */,
+				E4DB7A991B011289001AFACC /* swiftyJSON.swift in Sources */,
+				E4DB7AAA1B01147D001AFACC /* NSData+Extension.swift in Sources */,
+				E4DB7AA11B011384001AFACC /* Compressor.swift in Sources */,
 				E426C2FD1AFD40FB000BB268 /* ViewController.swift in Sources */,
 				E426C2FB1AFD40FB000BB268 /* AppDelegate.swift in Sources */,
+				E4DB7A9B1B011289001AFACC /* JSONObject.swift in Sources */,
+				E4DB7A971B011289001AFACC /* UIViewController+Extension.swift in Sources */,
+				E4DB7AE41B01820D001AFACC /* JavaScriptAnalyzer.swift in Sources */,
 				E426C32B1AFD4107000BB268 /* NSData+Base64.m in Sources */,
+				E4DB7AA31B0113AA001AFACC /* DateFormat.swift in Sources */,
+				E4DB7A9C1B011289001AFACC /* JsonRequest.swift in Sources */,
 				E426C32D1AFD4107000BB268 /* StringEncryptionBridgeHelper.m in Sources */,
+				E4DB7A9E1B011289001AFACC /* WebApiManager.swift in Sources */,
 				E426C3311AFD4107000BB268 /* CompresJSONSettings.swift in Sources */,
+				E4DB7A951B011289001AFACC /* String+Extension.swift in Sources */,
+				E4DB7AA81B01147D001AFACC /* cjson_String+Extension.swift in Sources */,
+				E4DB7A981B011289001AFACC /* Almofire.swift in Sources */,
+				E4DB7A9A1B011289001AFACC /* JSONMappingDefaults.swift in Sources */,
 				E426C32E1AFD4107000BB268 /* Encryptor.swift in Sources */,
+				E4DB7A961B011289001AFACC /* UIAlertController+Extension.swift in Sources */,
+				E4DB7AA91B01147D001AFACC /* Extensions.swift in Sources */,
 				E426C32C1AFD4107000BB268 /* StringEncryption.m in Sources */,
-				E426C32F1AFD4107000BB268 /* Extensions.swift in Sources */,
+				E4DB7A681B010DE1001AFACC /* NSData+GZip+Extension.swift in Sources */,
+				E4DB7A9D1B011289001AFACC /* WebApiDefaults.swift in Sources */,
 				E426C3301AFD4107000BB268 /* CompresJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -497,6 +621,7 @@
 				E426C3161AFD40FB000BB268 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		E426C3171AFD40FB000BB268 /* Build configuration list for PBXNativeTarget "CompresJSONTests" */ = {
 			isa = XCConfigurationList;
@@ -505,6 +630,7 @@
 				E426C3191AFD40FB000BB268 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

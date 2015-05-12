@@ -5,3 +5,5 @@
 #import "StringEncryption.h"
 #import "NSData+Base64.h"
 #import "StringEncryptionBridgeHelper.h"
+
+#import <zlib.h>

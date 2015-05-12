@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         
-        CompresJSON.sharedInstance().settings.encryptionKey = "1234567891123456"
+        CompresJSON.sharedInstance().settings.encryptionKey = "7e4bac048ef766e83f0ec8c079e1f90c2eb690a9"
         
         return true
     }
