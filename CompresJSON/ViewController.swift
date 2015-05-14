@@ -24,18 +24,19 @@ class ViewController: UIViewController {
 //        item.CardDesignID = 2
 //        
 //        item.compresJSONWebApiInsert()?.onDownloadSuccess({ (json, request) -> () in
-//            println(json)
+//            
 //            var item2:CardDesignItem = CardDesignItem.createObjectFromJson(json)
 //
-//            println(item2.ItemText)
-//            println(item2.CardDesignItemID)
+//            println("after insert: \(item2.ItemText)")
+//            println("after: \(item2.CardDesignItemID)")
 //        })
         
         CardDesignItem.compresJsonWebApiGetObjectByID(CardDesignItem.self, id: 8386, completion: { (object) -> () in
             
             var item:CardDesignItem = object
-            item.ItemText = "hello test 9 !!!"
-            item.CardDesignItemID = 8386 // REMEMBER ID
+            println(item.CardDesignItemID)
+            item.ItemText = "hello test 10 !!!"
+            //item.CardDesignItemID = 8386 // REMEMBER ID
             item.compresJSONWebApiUpdate()?.onDownloadSuccess({ (json, request) -> () in
                 
                 item = CardDesignItem.createObjectFromJson(json)

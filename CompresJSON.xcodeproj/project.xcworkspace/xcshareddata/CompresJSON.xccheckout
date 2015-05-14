@@ -7,14 +7,14 @@
 	<key>IDESourceControlProjectIdentifier</key>
 	<string>4A6A6305-B5C1-43F3-A432-D312C3531B60</string>
 	<key>IDESourceControlProjectName</key>
-	<string>project</string>
+	<string>CompresJSON</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 		<key>DD88A1B1F78A1AB26F1303A5C0CD06D907733664</key>
 		<string>https://github.com/bechmannlimited/CompresJSON-ios.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
-	<string>CompresJSON.xcodeproj/project.xcworkspace</string>
+	<string>CompresJSON.xcodeproj</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 		<key>DD88A1B1F78A1AB26F1303A5C0CD06D907733664</key>
